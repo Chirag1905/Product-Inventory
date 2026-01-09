@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fade-in 0.4s ease-out;
+}
+
+@layer utilities {
+    .glass {
+        background: linear-gradient(135deg,
+                rgba(255, 255, 255, 0.85),
+                rgba(255, 255, 255, 0.65));
+        backdrop-filter: blur(12px);
+    }
+
+    .card {
+        @apply rounded-2xl border border-gray-200 shadow-sm hover:shadow-xl transition-all duration-300;
+    }
+
+    .input {
+        @apply w-full rounded-xl border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all bg-white;
+    }
+
+    .btn-primary {
+        @apply rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold py-3 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 shadow-lg;
+    }
+
+    .chip {
+        @apply px-3 py-1 rounded-full text-sm border transition-all;
+    }
+}
