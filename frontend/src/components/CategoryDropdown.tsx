@@ -78,7 +78,7 @@ const CategoryDropdown: React.FC<CategoryDropdownProps> = ({
 
     // if (loading || !data) return null;
 
-    const categories = data?.categories?.categories ?? [];
+    const categories = data?.categories?.categories;
 
     return (
         <div

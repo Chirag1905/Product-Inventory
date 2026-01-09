@@ -30,4 +30,4 @@ RUN echo "✅ Prisma client generated"
 
 EXPOSE 4000
 
-CMD ["sh", "-c", "bun prisma migrate deploy && bun src/index.ts"]
+CMD ["sh", "-c", "bun prisma migrate deploy && bun run src/seeder/categories.seed.ts && bun src/index.ts"]
